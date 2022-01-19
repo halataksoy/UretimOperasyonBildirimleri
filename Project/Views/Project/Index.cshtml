@@ -1,0 +1,54 @@
+﻿@model List<Project.Models.Dtos.UretimOperasyonBildirimleriOutputDto>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table border="2" style="width: 600px;">
+    <thead>
+        <tr bgcolor="yellow">
+            <th>
+                İş Numarası
+            </th>
+            <th>
+                Başlangıç
+            </th>
+            <th>
+               Bitiş
+            </th>
+            <th>
+                Toplam Süre
+
+            </th>
+            <th>
+                Statü
+            </th>
+            <th>
+                Duruş Nedeni
+            </th>
+          
+        </tr>
+
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr bgcolor="">
+                <td>
+                    @item.IsNo
+                </td>
+                <td>@item.Baslangic</td>
+                <td>@item.Bitis</td>
+                <td>@item.Sure</td>
+                <td>@item.Status</td>
+                <td>@item.DurusNedeni</td>
+            </tr>
+        }
+
+
+    </tbody>
+
+</table>
+
